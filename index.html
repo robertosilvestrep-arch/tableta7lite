@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galaxy Tab A7 Lite completo — R$ 650</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #12141a;
+    --panel: #1b1e26;
+    --panel-2: #21252f;
+    --line: #2c313d;
+    --text: #f2f3f6;
+    --muted: #9aa1b0;
+    --accent: #8ea6ff;
+    --accent-dim: #4a5a94;
+    --gold: #f4c26b;
+    --radius: 14px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family: 'Sora', sans-serif;
+  }
+  .wrap{
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 0 60px;
+  }
+
+  /* ---- HERO ---- */
+  .hero{
+    position: relative;
+    padding: 34px 22px 26px;
+    background:
+      radial-gradient(120% 140% at 15% -10%, rgba(142,166,255,0.18), transparent 55%),
+      var(--bg);
+    border-bottom: 1px solid var(--line);
+  }
+  .kicker{
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .hero h1{
+    font-size: 34px;
+    font-weight: 800;
+    margin: 6px 0 4px;
+    letter-spacing: -0.01em;
+  }
+  .hero p.sub{
+    color: var(--muted);
+    margin: 0 0 20px;
+    font-size: 15px;
+    max-width: 46ch;
+  }
+  .price-row{
+    display:flex;
+    align-items:baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .price{
+    font-family: 'Sora', sans-serif;
+    font-weight: 800;
+    font-size: 46px;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .price small{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--muted);
+  }
+  .pill{
+    display:inline-block;
+    padding: 5px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--accent-dim);
+    color: var(--accent);
+    font-size: 12.5px;
+    font-weight: 600;
+    background: rgba(142,166,255,0.08);
+  }
+
+  /* ---- GALLERY ---- */
+  .gallery{
+    padding: 22px;
+  }
+  .gallery-main{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: #05060a;
+    border: 1px solid var(--line);
+  }
+  .gallery-main img{
+    width:100%; height:100%;
+    object-fit: contain;
+    display:block;
+    background:#05060a;
+  }
+  .gallery-nav{
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+    background: rgba(18,20,26,0.72);
+    border: 1px solid var(--line);
+    color: var(--text);
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    display:flex; align-items:center; justify-content:center;
+    cursor:pointer;
+    font-size: 18px;
+    user-select:none;
+    backdrop-filter: blur(4px);
+  }
+  .gallery-nav:hover{ background: rgba(142,166,255,0.25); }
+  .gallery-nav.prev{ left: 10px; }
+  .gallery-nav.next{ right: 10px; }
+  .gallery-caption{
+    position:absolute;
+    left: 12px; bottom: 10px;
+    font-size: 12.5px;
+    background: rgba(5,6,10,0.6);
+    padding: 5px 10px;
+    border-radius: 999px;
+    color: var(--text);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .thumbs{
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .thumbs button{
+    padding:0;
+    border-radius: 9px;
+    overflow:hidden;
+    border: 2px solid var(--line);
+    background: #05060a;
+    aspect-ratio: 1/1;
+    cursor:pointer;
+  }
+  .thumbs button.active{ border-color: var(--accent); }
+  .thumbs img{ width:100%; height:100%; object-fit:cover; display:block; opacity:0.85; }
+  .thumbs button.active img{ opacity:1; }
+
+  /* ---- SECTIONS ---- */
+  section{ padding: 8px 22px 26px; }
+  .section-title{
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--muted);
+    margin: 0 0 12px;
+  }
+
+  .includes{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .includes .item{
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 14px;
+    display:flex;
+    gap: 10px;
+    align-items:flex-start;
+  }
+  .includes .item .ico{
+    width: 30px; height:30px;
+    border-radius: 8px;
+    background: rgba(142,166,255,0.12);
+    color: var(--accent);
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+    font-size:16px;
+  }
+  .includes .item .txt strong{
+    display:block;
+    font-size: 14px;
+    margin-bottom: 2px;
+  }
+  .includes .item .txt span{
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+
+  .specs{
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow:hidden;
+  }
+  .spec-row{
+    display:flex;
+    justify-content: space-between;
+    padding: 12px 16px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--line);
+  }
+  .spec-row:last-child{ border-bottom:none; }
+  .spec-row .k{ color: var(--muted); }
+  .spec-row .v{ font-weight: 600; text-align:right; }
+
+  .condition{
+    background: var(--panel-2);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px;
+    font-size: 14.5px;
+    color: var(--text);
+  }
+  .condition strong{ color: var(--gold); }
+
+  .cta{
+    margin: 8px 22px 0;
+    display:flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .btn{
+    flex:1;
+    min-width: 220px;
+    text-align:center;
+    padding: 15px 18px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor:pointer;
+    border: none;
+    text-decoration:none;
+    display:inline-block;
+  }
+  .btn-primary{
+    background: var(--accent);
+    color: #10131c;
+  }
+  .btn-primary:hover{ filter: brightness(1.08); }
+
+  footer{
+    padding: 22px;
+    text-align:center;
+    color: var(--muted);
+    font-size: 12.5px;
+  }
+
+  /* lightbox */
+  .lightbox{
+    position: fixed; inset:0;
+    background: rgba(5,6,10,0.92);
+    display:none;
+    align-items:center; justify-content:center;
+    z-index: 50;
+    padding: 24px;
+  }
+  .lightbox.open{ display:flex; }
+  .lightbox img{
+    max-width: 100%;
+    max-height: 85vh;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  }
+  .lightbox .close{
+    position:absolute;
+    top: 18px; right: 22px;
+    color: var(--text);
+    font-size: 30px;
+    cursor:pointer;
+    background:none; border:none;
+    line-height:1;
+  }
+
+  @media (max-width:420px){
+    .hero h1{ font-size: 28px; }
+    .price{ font-size: 38px; }
+    .includes{ grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="kicker">Kit completo · pronto pra usar</div>
+    <h1>Galaxy Tab A7 Lite</h1>
+    <p class="sub">Tablet Samsung com teclado Bluetooth, capa de transporte e capa extra de brinde. Tudo o que você precisa já incluso.</p>
+    <div class="price-row">
+      <div class="price">R$ 750<small>,00</small></div>
+      <span class="pill">Aceita combinar</span>
+    </div>
+  </div>
+
+  <div class="gallery">
+    <div class="gallery-main">
+      <img id="mainImg" src="1789089491408_WhatsApp_Image_2026-09-10_at_22_12_45.jpeg" alt="Galaxy Tab A7 Lite completo com caixa, capas e acessórios">
+      <button class="gallery-nav prev" onclick="changeSlide(-1)" aria-label="Anterior">&#8249;</button>
+      <button class="gallery-nav next" onclick="changeSlide(1)" aria-label="Próxima">&#8250;</button>
+      <div class="gallery-caption" id="caption">Kit completo: caixa, capas e tablet</div>
+    </div>
+    <div class="thumbs" id="thumbs"></div>
+  </div>
+
+  <section>
+    <div class="section-title">O QUE ACOMPANHA</div>
+    <div class="includes">
+      <div class="item">
+        <div class="ico">&#9646;</div>
+        <div class="txt"><strong>Tablet Galaxy Tab A7 Lite</strong><span>Tela de 8.7", cor cinza</span></div>
+      </div>
+      <div class="item">
+        <div class="ico">&#9000;</div>
+        <div class="txt"><strong>Teclado Bluetooth</strong><span>Compatível com Android, Windows e iOS</span></div>
+      </div>
+      <div class="item">
+        <div class="ico">&#9635;</div>
+        <div class="txt"><strong>Capa de transporte</strong><span>Case rígido para levar com segurança</span></div>
+      </div>
+      <div class="item">
+        <div class="ico">&#10022;</div>
+        <div class="txt"><strong>Capa extra de brinde</strong><span>Tipo carteira, com função de suporte</span></div>
+      </div>
+      <div class="item">
+        <div class="ico">&#9889;</div>
+        <div class="txt"><strong>Carregador original</strong><span>Cabo e fonte na caixa</span></div>
+      </div>
+      <div class="item">
+        <div class="ico">&#128230;</div>
+        <div class="txt"><strong>Caixa original</strong><span>Com manual e acessórios</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">FICHA TÉCNICA</div>
+    <div class="specs">
+      <div class="spec-row"><span class="k">Modelo</span><span class="v">SM-T220 (Wi-Fi)</span></div>
+      <div class="spec-row"><span class="k">Sistema</span><span class="v">Android 14 · One UI 6.1</span></div>
+      <div class="spec-row"><span class="k">Tela</span><span class="v">8.7" · 1340 x 800 px</span></div>
+      <div class="spec-row"><span class="k">Memória</span><span class="v">3 GB RAM · 32 GB (expansível a 1 TB)</span></div>
+      <div class="spec-row"><span class="k">Câmeras</span><span class="v">8 MP traseira · 2 MP frontal</span></div>
+      <div class="spec-row"><span class="k">Bateria</span><span class="v">5.100 mAh</span></div>
+      <div class="spec-row"><span class="k">Conectividade</span><span class="v">Wi-Fi · Bluetooth 5.0 · USB-C</span></div>
+      <div class="spec-row"><span class="k">Peso</span><span class="v">371 g</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">ESTADO</div>
+    <div class="condition">
+      Tablet <strong>funcionando perfeitamente</strong>, sistema atualizado (Android 14). Vem com todos os acessórios originais na caixa, mais teclado, capa de transporte e capa extra inclusos no kit. Ideal para estudo, leitura, trabalho ou uso do dia a dia.
+    </div>
+  </section>
+
+  <div class="cta">
+    <a class="btn btn-primary" href="https://wa.me/5513992014692?text=Oi%20Roberto%2C%20tenho%20interesse%20no%20Galaxy%20Tab%20A7%20Lite!" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+  </div>
+
+  <footer>Fotos reais do produto anunciado · Retirada combinada · Roberto · (13) 99201-4692</footer>
+</div>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="close" onclick="closeLightbox(event)">&times;</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<script>
+  const images = [
+    { src: "1789089491408_WhatsApp_Image_2026-09-10_at_22_12_45.jpeg", caption: "Kit completo: caixa, capas e tablet" },
+    { src: "1789089491409_WhatsApp_Image_2026-09-10_at_22_12_46__3_.jpeg", caption: "Traseira · Samsung original" },
+    { src: "1789089491408_WhatsApp_Image_2026-09-10_at_22_12_46__2_.jpeg", caption: "Tela · sem trincos ou riscos" },
+    { src: "1789089491407_WhatsApp_Image_2026-09-10_at_22_12_45__1_.jpeg", caption: "Teclado Bluetooth incluso" },
+    { src: "1789089491409_WhatsApp_Image_2026-09-10_at_22_12_46.jpeg", caption: "Carregador e acessórios originais" },
+    { src: "1789089491408_WhatsApp_Image_2026-09-10_at_22_12_46__1_.jpeg", caption: "Caixa original" }
+  ];
+
+  let current = 0;
+  const mainImg = document.getElementById('mainImg');
+  const caption = document.getElementById('caption');
+  const thumbsWrap = document.getElementById('thumbs');
+
+  function renderThumbs(){
+    thumbsWrap.innerHTML = images.map((img, i) =>
+      `<button class="${i===current?'active':''}" onclick="goTo(${i})"><img src="${img.src}" alt=""></button>`
+    ).join('');
+  }
+
+  function update(){
+    mainImg.src = images[current].src;
+    caption.textContent = images[current].caption;
+    renderThumbs();
+  }
+
+  function changeSlide(dir){
+    current = (current + dir + images.length) % images.length;
+    update();
+  }
+
+  function goTo(i){
+    current = i;
+    update();
+  }
+
+  mainImg.addEventListener('click', () => {
+    document.getElementById('lightboxImg').src = images[current].src;
+    document.getElementById('lightbox').classList.add('open');
+  });
+
+  function closeLightbox(e){
+    document.getElementById('lightbox').classList.remove('open');
+  }
+
+  update();
+</script>
+</body>
+</html>
